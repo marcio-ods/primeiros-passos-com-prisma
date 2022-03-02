@@ -16,8 +16,27 @@ model User {
   name  String?
   email String  @unique
 
+  Post Post[]
   @@map("users")
 }
+
+model Post {
+  id        Int     @id @default(autoincrement())
+  title     String
+  content   String?
+  published Boolean @default(false)
+  author_id Int?
+  author    User?   @relation(fields: [author_id], references: [id])
+}
+
+// model User2 {
+//   id       Int     @id @default(autoincrement())
+//   provider String?
+//   email    String
+
+//   @@unique([email, provider])
+//   @@map("users_2")
+// }
 
 // model Product {
 //   id         String   @id @default(uuid())

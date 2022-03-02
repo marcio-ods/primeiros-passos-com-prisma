@@ -2,6 +2,10 @@
   "name": "primeiros-passos-com-prisma",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "tsnd  --rs --cls --respawn --ignore-watch node_modules --transpile-only script",
+    "dev1": "ts  --rs --cls --respawn --ignore-watch node_modules --transpile-only script"
+  },
   "repository": "https://github.com/marcio-ods/primeiros-passos-com-prisma.git",
   "author": "marcio-ods <63021988+marcio-ods@users.noreply.github.com>",
   "license": "MIT",
